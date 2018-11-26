@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nutrition API Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <input type="text" id="term" placeholder="Enter Food Item"/>
+        <button type="submit">Submit</button>
+      </form>
+    <div class="NutritionContent"></div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('form').submit(function(event){
+
+        $.ajax({
+          type: 'GET',
+          url: 'https://api.nutritionix.com/v1_1/search',
+          data: {
+            appId: '536f8be5'
+            appKey
+          }
+        })
+      })
+    })
+
+  </body>
+</html>
